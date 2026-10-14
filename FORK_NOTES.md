@@ -8,8 +8,19 @@ An upstream native `r9446j` definition takes precedence over this alias.
 
 The regional profile is provisional. Discovery, runtime initialization,
 status reporting and map rendering have been verified on one X50 Ultra
-Complete with firmware `4.3.9_3684`. Cleaning and video features require
-separate validation. This is not an official Tasshack release.
+Complete with firmware `4.3.9_3684`. Short vacuum-only global and room tasks,
+pause and return to dock were checked through Home Assistant state feedback.
+These were brief command checks, not full cleaning-cycle validation. Dreame
+cloud request timeouts occurred during the room test; docking succeeded after
+recovery. Global cleaning controls became available with CleanGenius off, and
+room controls became available with customized cleaning on. The original
+settings were restored after testing.
+
+Wet cleaning and the robot's front-camera video have not been validated.
+The integration's camera entities display maps, not the robot's video feed.
+The maintainer's current streaming limitation is described in
+[issue 656](https://github.com/Tasshack/dreame-vacuum/issues/656).
+This is not an official Tasshack release.
 
 ## Installation and updates
 
