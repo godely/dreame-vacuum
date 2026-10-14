@@ -16,7 +16,18 @@ recovery. Global cleaning controls became available with CleanGenius off, and
 room controls became available with customized cleaning on. The original
 settings were restored after testing.
 
-Wet cleaning and the robot's front-camera video have not been validated.
+One mopping-only room task completed on the same device after its clean-water
+tank was refilled. Home Assistant reported the mop pads installed, Mopping,
+4 m² covered in 5 minutes, automatic return to dock, Completed and Charging,
+then the dock's post-cleaning Washing state. A water-level adjustment was
+checked and restored. Post-test diagnostics confirm all changed preferences
+match the baseline and the robot has no error or active cleaning task.
+These observations verify reported operation; physical floor moisture has
+not yet been confirmed by the owner, and long-term operation remains untested.
+A cloud map-file download timed out during the wet-test window; the cleaning
+task and automatic docking still completed. Cloud reliability remains a limit.
+
+The robot's front-camera video has not been validated.
 The integration's camera entities display maps, not the robot's video feed.
 The maintainer's current streaming limitation is described in
 [issue 656](https://github.com/Tasshack/dreame-vacuum/issues/656).
