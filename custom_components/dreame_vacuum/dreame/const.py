@@ -1604,3 +1604,21 @@ ERROR_CODE_GEN5_TO_IMAGE_INDEX: Final = {
     DreameVacuumErrorCode.ROBOTIC_ARM_STOPPED: 212,
     DreameVacuumErrorCode.DRAINAGE_OUTLET_FILTER: 998,
 }
+
+# BEGIN REGIONAL X50 SUPPORT
+# r9446j is a regional X50 Ultra Complete variant with dynamic video vendors.
+# Reuse the supported r9446k profile until a native profile is available.
+import base64 as _regional_base64
+import json as _regional_json
+import zlib as _regional_zlib
+
+_regional_info = _regional_json.loads(
+    _regional_zlib.decompress(_regional_base64.b64decode(DEVICE_INFO), 47)
+)
+if "r9446j" not in _regional_info[3]:
+    _regional_info[3]["r9446j"] = _regional_info[3]["r9446k"]
+    DEVICE_INFO = _regional_base64.b64encode(
+        _regional_zlib.compress(_regional_json.dumps(_regional_info).encode())
+    ).decode()
+del _regional_info, _regional_base64, _regional_json, _regional_zlib
+# END REGIONAL X50 SUPPORT
